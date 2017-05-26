@@ -1,34 +1,18 @@
-# ¿¿
+# ç®€ä»‹
 
-1. ¿¿manager.py¿¿¿¿¿¿¿¿
-```
- host = '172.16.1.162' #¿¿¿¿¿¿ 
- user = 'aaa' #netconf¿¿¿ 
- password = 'aaa' #netconf¿¿
+1.è¯·åœ¨manager.pyé‡Œé¢å¡«å¦‚ä¸‹ä¿¡æ¯ï¼š host = '172.16.1.162' #è¦ç™»å½•çš„ä¸»æœº user = 'aaa' #netconfç”¨æˆ·å password = 'aaa' #netconfå¯†ç 
 
-¿¿¿¿¿¿h3c¿¿¿¿netconf¿¿ ¿¿,¿h3c¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿press¿¿¿
-system-view 
-local-user aaa class manage 
-password simple aaa 
-authorization-attribute user-role network-admin work-directory flash:/ 
-service-type https 
-quit 
-netconf soap https enable 
-quit
-```
+æ³¨æ„ï¼šè¯·ä¿è¯h3cè®¾å¤‡å¼€å¯netconfæœåŠ¡ ä¾‹å¦‚,åœ¨h3cäº¤æ¢æœºä¸Šé…ç½®å¦‚ä¸‹ä¿¡æ¯ï¼Œå…·ä½“å‚è§pressæ‰‹å†Œã€‚ system-view local-user aaa class manage password simple aaa authorization-attribute user-role network-admin work-directory flash:/ service-type https quit netconf soap https enable quit
 
-2. ¿¿set_static_route_table¿¿¿¿¿¿¿ ¿¿delete_static_route_table.py¿¿¿¿¿¿¿
+2.æ‰§è¡Œset_static_route_tableä¸ºé…ç½®é™æ€è·¯ç”± æ‰§è¡Œdelete_static_route_table.pyä¸ºåˆ é™¤é™æ€è·¯ç”±
 
-¿¿¿¿¿¿¿¿¿manager.py¿¿¿netconf¿¿¿¿ doc/Comware V7 StaticRoute NETCONF XML API Configuration Reference
-```
-¿¿¿¿¿¿¿¿¿¿¿¿ 
-DestVrfIndex = '0' 
-DestTopologyIndex = '0' 
-Ipv4Address = '3.3.3.3' 
-Ipv4PrefixLength = '24' 
-NexthopVrfIndex = '0' 
-NexthopIpv4Address = '4.4.4.1' 
-IfIndex = '0'
-```
+æŠŠéœ€è¦ä¸‹çš„é…ç½®å†™åœ¨manager.pyé‡Œé¢ï¼Œnetconfæ¥å£å‚ç…§ doc/Comware V7 StaticRoute NETCONF XML API Configuration Reference
 
-3. ¿¿¿¿¿H3C¿¿¿¿¿
+ä¾‹å¦‚ï¼Œé™æ€è·¯ç”±çš„ä¿¡æ¯ä¸ºï¼š DestVrfIndex = '0' DestTopologyIndex = '0' Ipv4Address = '3.3.3.3' Ipv4PrefixLength = '24' NexthopVrfIndex = '0' NexthopIpv4Address = '4.4.4.1' IfIndex = '0'
+
+3.è·å–è®¾å¤‡çš„é…ç½®æ–‡ä»¶ æ‰§è¡Œget_config_file.pyå¯ä»¥è·å–é…ç½®æ–‡ä»¶
+
+æ³¨æ„è¯·åœ¨h3cäº¤æ¢æœºä¸Šé…ç½®ftp serverï¼Œæä¾›ftpæœåŠ¡ã€‚ ä¾‹å¦‚,åœ¨h3cäº¤æ¢æœºä¸Šé…ç½®å¦‚ä¸‹ä¿¡æ¯ï¼Œå…·ä½“å‚è§pressæ‰‹å†Œã€‚ system-view local-user aaa class manage password simple aaa authorization-attribute user-role network-admin work-directory flash:/ service-type ftp quit ftp server enable quit
+
+
+# ä»¥ä¸Šä»£ç ç”±H3Cå‚å®¶æä¾›
