@@ -1,46 +1,34 @@
-1.ÇëÔÚmanager.pyÀïÃæÌîÈçÏÂĞÅÏ¢£º
-host = '172.16.1.162' #ÒªµÇÂ¼µÄÖ÷»ú
-user = 'aaa'          #netconfÓÃ»§Ãû
-password = 'aaa'      #netconfÃÜÂë
+# ¿¿
 
-×¢Òâ£ºÇë±£Ö¤h3cÉè±¸¿ªÆônetconf·şÎñ
-ÀıÈç,ÔÚh3c½»»»»úÉÏÅäÖÃÈçÏÂĞÅÏ¢£¬¾ßÌå²Î¼ûpressÊÖ²á¡£
-system-view
-local-user aaa class manage
-password simple aaa
-authorization-attribute user-role network-admin work-directory flash:/
-service-type https
+1. ¿¿manager.py¿¿¿¿¿¿¿¿
+```
+ host = '172.16.1.162' #¿¿¿¿¿¿ 
+ user = 'aaa' #netconf¿¿¿ 
+ password = 'aaa' #netconf¿¿
+
+¿¿¿¿¿¿h3c¿¿¿¿netconf¿¿ ¿¿,¿h3c¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿press¿¿¿
+system-view 
+local-user aaa class manage 
+password simple aaa 
+authorization-attribute user-role network-admin work-directory flash:/ 
+service-type https 
+quit 
+netconf soap https enable 
 quit
-netconf soap https enable
-quit
+```
 
-2.Ö´ĞĞset_static_route_tableÎªÅäÖÃ¾²Ì¬Â·ÓÉ
-  Ö´ĞĞdelete_static_route_table.pyÎªÉ¾³ı¾²Ì¬Â·ÓÉ
+2. ¿¿set_static_route_table¿¿¿¿¿¿¿ ¿¿delete_static_route_table.py¿¿¿¿¿¿¿
 
-°ÑĞèÒªÏÂµÄÅäÖÃĞ´ÔÚmanager.pyÀïÃæ£¬netconf½Ó¿Ú²ÎÕÕ doc/Comware V7 StaticRoute NETCONF XML API Configuration Reference
+¿¿¿¿¿¿¿¿¿manager.py¿¿¿netconf¿¿¿¿ doc/Comware V7 StaticRoute NETCONF XML API Configuration Reference
+```
+¿¿¿¿¿¿¿¿¿¿¿¿ 
+DestVrfIndex = '0' 
+DestTopologyIndex = '0' 
+Ipv4Address = '3.3.3.3' 
+Ipv4PrefixLength = '24' 
+NexthopVrfIndex = '0' 
+NexthopIpv4Address = '4.4.4.1' 
+IfIndex = '0'
+```
 
-ÀıÈç£¬¾²Ì¬Â·ÓÉµÄĞÅÏ¢Îª£º
-	DestVrfIndex = '0'
-	DestTopologyIndex = '0'
-	Ipv4Address = '3.3.3.3'
-	Ipv4PrefixLength = '24'
-	NexthopVrfIndex = '0'
-	NexthopIpv4Address = '4.4.4.1'
-	IfIndex = '0'
-	
-
-3.»ñÈ¡Éè±¸µÄÅäÖÃÎÄ¼ş
-Ö´ĞĞget_config_file.py¿ÉÒÔ»ñÈ¡ÅäÖÃÎÄ¼ş
-
-×¢ÒâÇëÔÚh3c½»»»»úÉÏÅäÖÃftp server£¬Ìá¹©ftp·şÎñ¡£
-ÀıÈç,ÔÚh3c½»»»»úÉÏÅäÖÃÈçÏÂĞÅÏ¢£¬¾ßÌå²Î¼ûpressÊÖ²á¡£
-system-view
-local-user aaa  class manage
-password simple aaa
-authorization-attribute user-role network-admin work-directory flash:/
-service-type ftp 
-quit
-ftp server enable
-quit
-
-
+3. ¿¿¿¿¿H3C¿¿¿¿¿
